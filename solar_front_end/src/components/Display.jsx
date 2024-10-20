@@ -21,28 +21,28 @@ const Display = (params) => {
               </div>
             </div>
           </div>
-          <div className="w-[40%] m-2">
-            <div className="w-full h-full border-[1.5px] border-sky-400 rounded-xl">
-              <div className="flex justify-center items-center text-3xl font-bold text-sky-400">
+          <div className="w-[40%] m-2 inset-0 backdrop-blur-sm">
+            <div className="w-full h-full border-[1.5px] border-white rounded-xl shadow-[0_0_20px_theme('colors.white')]">
+              <div className="flex justify-center items-center text-3xl font-bold text-white">
                 <h1>Weather</h1>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-56 w-full p-2">
-          <div className="w-full h-full flex border-[1.5px] border-sky-400  rounded-xl">
-            <div className="flex flex-col justify-around rounded-l-xl bg-sky-100 border-r-[1px] border-sky-500 p-2">
+        <div className="h-64 w-full p-2 inset-0 backdrop-blur-sm">
+          <div className="w-full h-full flex border-[1.5px] border-white rounded-xl shadow-[0_0_20px_theme('colors.white')]">
+            <div className="flex flex-col justify-around rounded-l-xl text-white border-r-[1px] border-white p-2 px-4">
               <p>Time</p>
               <p>GHI</p>
               <p>DNI</p>
               <p>DHI</p>
             </div>
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row justify-between overflow-x-auto max-w-full">
               {predictions ? (
-                predictions.slice(0, 22).map((prediction, index) => (
+                predictions.slice(0, 24).map((prediction, index) => (
                   <div
                     key={index}
-                    className="flex flex-col justify-around bg-sky-100 border-r-[1px] border-sky-500 p-2"
+                    className="flex flex-col justify-around text-white border-r-[1px] border-white p-2 px-4"
                   >
                     <p>
                       {index}-{index + 1}

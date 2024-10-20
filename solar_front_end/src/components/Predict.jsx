@@ -44,10 +44,8 @@ const App = () => {
 
   return (
     <>
-      <div className="left-0 top-0 sticky -z-10">
-        <BackgroundImage image={`url(/imgs/S7.jpg)`} hgh={82} />
-      </div>
-      <div className="text-black">
+      <div className="left-0 top-0 sticky -z-10"></div>
+      <div className="text-white">
         <div className="App flex flex-col items-center ">
           <h1 className="font-bold text-4xl md:text-6xl m-9 hover:cursor-pointer">
             Solar Radiation Forecasting

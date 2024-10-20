@@ -4,10 +4,8 @@ import BackgroundImage from "./Backgroundimage";
 const About = () => {
   return (
     <div className="relative h-screen">
-      <div className="left-0 top-0 sticky -z-10">
-        <BackgroundImage image={`url(/imgs/S1.jpeg)`} hgh={91} />
-      </div>
-      <div className="absolute inset-0 flex flex-col items-center overflow-y-auto p-6 text-red-600 backdrop-blur-md bg-opacity-60">
+      <div className="left-0 top-0 sticky -z-10"></div>
+      <div className="absolute inset-0 flex flex-col items-center overflow p-6 text-red-600">
         <h1 className="text-4xl font-bold mb-4">About Solar Prediction App</h1>
         <p className="text-lg max-w-3xl text-center">
           Welcome to the Solar Prediction App! This application allows users to

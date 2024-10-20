@@ -1,21 +1,64 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between px-4 py-3 border-[1.5px] border-b-0 border-black bg-blue-400 bg-opacity-20 rounded-t-2xl">
-        <div className="font-bold hover:cursor-pointer">/SOFO\</div>
-        <li className="flex gap-12">
-          <ul className="hover:cursor-pointer hover:font-bold">
-            <a href="/">Home</a>
+      <div className="flex text-white justify-between px-4 items-center pt-2">
+        <div className="h-full font-bold hover:cursor-pointer flex items-cetner">
+          <img src="/imgs/logo.webp" alt="..." className="w-6 rounded-full" />
+          <span>/SOFO\</span>
+        </div>
+        <div className="h-full">
+          <ul className="flex gap-10 inset-0 backdrop-blur-sm rounded-xl p-1">
+            <li className="hover:cursor-pointer inset-0 backdrop-blur-md bg-opacity-white py-2 px-3 rounded-xl">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-white font-bold" : "text-gray-400"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="hover:cursor-pointer py-2 px-3 rounded-lg">
+              <NavLink
+                to="/predict"
+                className={({ isActive }) =>
+                  isActive ? "text-white font-bold" : "text-gray-400"
+                }
+              >
+                Predict
+              </NavLink>
+            </li>
+            <li className="hover:cursor-pointer py-2 px-3 rounded-lg">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-white font-bold" : "text-gray-400"
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="hover:cursor-pointer py-2 px-3 rounded-lg">
+              <NavLink
+                to="/support"
+                className={({ isActive }) =>
+                  isActive ? "text-white font-bold" : "text-gray-400"
+                }
+              >
+                Support
+              </NavLink>
+            </li>
           </ul>
-          <ul className="hover:cursor-pointer hover:font-bold">
-            <a href="/about">About</a>
-          </ul>
-          <ul className="hover:cursor-pointer hover:font-bold">
-            <a href="/contact">Contact</a>
-          </ul>
-        </li>
+        </div>
+        <div className="flex px-4 py-[4px] items-center inset-0 backdrop-blur-sm hover:cursor-pointer rounded-xl">
+          <span className="pb-[3px] pr-1 font-bold text-2xl items-center">
+            ={" "}
+          </span>
+          <span className="pb-1 pt-1"> Menu</span>
+        </div>
       </div>
     </>
   );

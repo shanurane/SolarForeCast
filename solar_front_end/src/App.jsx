@@ -10,6 +10,8 @@ import Weather from "./components/Weather";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Display from "./components/Display";
+import Glower from "./components/Glower";
+import BackgroundImage from "./components/Backgroundimage";
 
 // Components for each route
 // const Home = () => <h2>Home Page</h2>;
@@ -19,9 +21,10 @@ import Display from "./components/Display";
 const App = () => {
   return (
     <Router>
-      <div className="m-2">
+      <BackgroundImage image={"url('/imgs/bg.jpg')"} />
+      <div className="">
         <Navbar />
-        <div className="min-h-[82vh] border-x-[1.5px] border-black">
+        <div className="min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/predict" element={<Predict />} />
@@ -29,6 +32,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/weather" element={<Weather />} />
             <Route path="/display" element={<Display />} />
+            <Route path="/glower" element={<Glower />} />
           </Routes>
         </div>
         <Footer />

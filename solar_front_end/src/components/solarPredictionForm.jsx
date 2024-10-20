@@ -116,7 +116,7 @@ const SolarPredictionForm = ({ loading }) => {
               Location :
             </label>
             <input
-              className="rounded-lg p-1 m-1 border-[1px] border-blue-600 bg-blue-200 text-black"
+              className="rounded-lg p-1 m-1 border-2 border-zinc-600 bg-transparent text-white"
               name="location"
               id={`location`}
               value="Indore"
